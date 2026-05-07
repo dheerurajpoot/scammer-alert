@@ -12,7 +12,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white dark:bg-slate-950">
       <Navigation onReportClick={() => setShowReportForm(true)} />
-      
+
       <main className="pt-20 pb-24">
         {/* Hero Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-24">
@@ -24,7 +24,7 @@ export default function AboutPage() {
             Protecting the <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">Digital Front</span>
           </h1>
           <p className="text-xl text-slate-500 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
-            Scammer Alert is a community-driven platform dedicated to exposing fraudulent activities and protecting innocent users from digital scams.
+            Scammers.pro is a community-driven platform dedicated to exposing fraudulent activities and protecting innocent users from digital scams.
           </p>
         </section>
 

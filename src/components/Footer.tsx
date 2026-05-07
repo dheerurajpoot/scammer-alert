@@ -18,7 +18,7 @@ export default function Footer() {
               <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform">
                 <Shield className="w-5 h-5 text-white" />
               </div>
-              <span className="font-bold text-lg tracking-tight">Scammer Alert</span>
+              <span className="font-bold text-lg tracking-tight">Scammers.Pro</span>
             </Link>
             <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6">
               Building a safer digital world together through community-verified scam reporting and protection tools.
@@ -41,7 +41,7 @@ export default function Footer() {
             <h3 className="text-xs font-black text-slate-900 dark:text-white uppercase tracking-[0.2em] mb-6">Platform</h3>
             <ul className="space-y-4">
               <li><Link href="/" className="text-sm text-slate-500 hover:text-blue-600 transition-colors font-medium">Search Database</Link></li>
-              <li><Link href="/about" className="text-sm text-slate-500 hover:text-blue-600 transition-colors font-medium">How it Works</Link></li>
+              <li><Link href="/about" className="text-sm text-slate-500 hover:text-blue-600 transition-colors font-medium">About</Link></li>
             </ul>
           </div>
 
@@ -69,7 +69,7 @@ export default function Footer() {
 
         <div className="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-slate-500 font-medium">
-            © {currentYear} Scammer Alert. All community reports are verified.
+            © {currentYear} Scammers.Pro. All community reports are verified.
           </p>
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />

@@ -2,10 +2,10 @@
 
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { Mail, MessageSquare, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin, Send } from 'lucide-react';
 import { useState } from 'react';
 import ReportForm from '@/components/ReportForm';
-import { BsTwitter } from 'react-icons/bs';
+import { FaFacebook } from 'react-icons/fa6';
 
 export default function ContactPage() {
   const [showReportForm, setShowReportForm] = useState(false);
@@ -48,16 +48,16 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="text-sm font-bold text-slate-400 uppercase tracking-widest">Email Us</h4>
-                    <p className="text-lg font-bold text-slate-900 dark:text-white">support@scammeralert.com</p>
+                    <p className="text-lg font-bold text-slate-900 dark:text-white">amitkumarteam90@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-6 group">
                   <div className="w-14 h-14 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl flex items-center justify-center group-hover:border-blue-600/30 transition-all shadow-sm">
-                    <BsTwitter className="w-6 h-6 text-blue-400" />
+                    <FaFacebook className="w-6 h-6 text-blue-400" />
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-slate-400 uppercase tracking-widest">Twitter</h4>
-                    <p className="text-lg font-bold text-slate-900 dark:text-white">@ScammerAlertHQ</p>
+                    <h4 className="text-sm font-bold text-slate-400 uppercase tracking-widest">Facebook</h4>
+                    <p className="text-lg font-bold text-slate-900 dark:text-white">@adsenseguruteam</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-6 group">
@@ -66,7 +66,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="text-sm font-bold text-slate-400 uppercase tracking-widest">Headquarters</h4>
-                    <p className="text-lg font-bold text-slate-900 dark:text-white">Digital Security Lab, Cloud Hub</p>
+                    <p className="text-lg font-bold text-slate-900 dark:text-white">Deelzo HQ, Delhi, India </p>
                   </div>
                 </div>
               </div>

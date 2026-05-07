@@ -16,11 +16,11 @@ export default function Navigation({ onReportClick }: NavigationProps) {
             <Shield className="w-6 h-6 text-white" />
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-xl tracking-tight">Scammer Alert</span>
+            <span className="font-bold text-xl tracking-tight">Scammers.Pro</span>
             <span className="text-[10px] text-blue-600 dark:text-blue-400 font-semibold uppercase tracking-wider -mt-1">Community Protection</span>
           </div>
         </Link>
-        
+
         <div className="flex items-center gap-4">
           <button 
             onClick={onReportClick}

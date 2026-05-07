@@ -31,7 +31,7 @@ export default function TermsPage() {
                 1. Acceptance of Terms
               </h2>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
-                By accessing and using Scammer Alert, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, you must not use our services. Our platform is provided &quot;as is&quot; for community protection purposes.
+                By accessing and using Scammers.Pro, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, you must not use our services. Our platform is provided &quot;as is&quot; for community protection purposes.
               </p>
             </div>
 
@@ -50,14 +50,14 @@ export default function TermsPage() {
             <div className="space-y-6 px-4">
               <h2 className="text-2xl font-black text-slate-900 dark:text-white">3. Data Accuracy</h2>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
-                While we strive to verify all reports, Scammer Alert does not guarantee the 100% accuracy of all community-submitted data. Users should exercise their own judgment and use our platform as one of many tools for digital safety.
+                While we strive to verify all reports, Scammers.Pro does not guarantee the 100% accuracy of all community-submitted data. Users should exercise their own judgment and use our platform as one of many tools for digital safety.
               </p>
             </div>
 
             <div className="space-y-6 px-4">
               <h2 className="text-2xl font-black text-slate-900 dark:text-white">4. Limitation of Liability</h2>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
-                Scammer Alert and its operators shall not be liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use the platform.
+                Scammers.Pro and its operators shall not be liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use the platform.
               </p>
             </div>
           </div>

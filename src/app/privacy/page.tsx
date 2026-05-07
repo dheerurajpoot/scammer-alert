@@ -31,7 +31,7 @@ export default function PrivacyPage() {
                 Data Protection Commitment
               </h2>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
-                At Scammer Alert, we take your privacy seriously. We collect only the information necessary to provide a safe reporting environment and never sell your personal data to third parties.
+                At Scammers.Pro, we take your privacy seriously. We collect only the information necessary to provide a safe reporting environment and never sell your personal data to third parties.
               </p>
             </div>
 
