@@ -154,6 +154,7 @@ export default function AdminLogin() {
                 </>
               )}
             </p>
+          </div> */}
         </div>
 
         {/* Footer Info */}
