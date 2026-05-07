@@ -1,0 +1,147 @@
+
+> scammer-alert@0.1.0 lint
+> eslint
+
+
+/Users/dheerurajpoot/Desktop/scammer-alert/src/app/admin/page.tsx
+  14:9  warning  'router' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/dheerurajpoot/Desktop/scammer-alert/src/app/layout.tsx
+  5:7  warning  '_geist' is assigned a value but never used      @typescript-eslint/no-unused-vars
+  6:7  warning  '_geistMono' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/dheerurajpoot/Desktop/scammer-alert/src/app/page.tsx
+  17:10  warning  'reportSubmitted' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               @typescript-eslint/no-unused-vars
+  21:7   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/dheerurajpoot/Desktop/scammer-alert/src/app/page.tsx:21:7
+  19 |   useEffect(() => {
+  20 |     if (!searchQuery.trim()) {
+> 21 |       setSearchResults([]);
+     |       ^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  22 |       return;
+  23 |     }
+  24 |  react-hooks/set-state-in-effect
+  35:62  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           @typescript-eslint/no-explicit-any
+
+/Users/dheerurajpoot/Desktop/scammer-alert/src/components/AdminDashboard.tsx
+   7:45  warning  'Filter' is defined but never used        @typescript-eslint/no-unused-vars
+  15:42  warning  'userEmail' is defined but never used     @typescript-eslint/no-unused-vars
+  29:95  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/dheerurajpoot/Desktop/scammer-alert/src/components/AdminLogin.tsx
+  43:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/dheerurajpoot/Desktop/scammer-alert/src/components/SearchResults.tsx
+  4:32  warning  'User' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/dheerurajpoot/Desktop/scammer-alert/src/components/ui/carousel.tsx
+  98:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/dheerurajpoot/Desktop/scammer-alert/src/components/ui/carousel.tsx:98:5
+   96 |   React.useEffect(() => {
+   97 |     if (!api) return
+>  98 |     onSelect(api)
+      |     ^^^^^^^^ Avoid calling setState() directly within an effect
+   99 |     api.on('reInit', onSelect)
+  100 |     api.on('select', onSelect)
+  101 |  react-hooks/set-state-in-effect
+
+/Users/dheerurajpoot/Desktop/scammer-alert/src/components/ui/sidebar.tsx
+  611:26  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+/Users/dheerurajpoot/Desktop/scammer-alert/src/components/ui/sidebar.tsx:611:26
+  609 |   // Random width between 50 to 90%.
+  610 |   const width = React.useMemo(() => {
+> 611 |     return `${Math.floor(Math.random() * 40) + 50}%`
+      |                          ^^^^^^^^^^^^^ Cannot call impure function
+  612 |   }, [])
+  613 |
+  614 |   return (  react-hooks/purity
+
+/Users/dheerurajpoot/Desktop/scammer-alert/src/components/ui/use-mobile.tsx
+  14:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/dheerurajpoot/Desktop/scammer-alert/src/components/ui/use-mobile.tsx:14:5
+  12 |     }
+  13 |     mql.addEventListener('change', onChange)
+> 14 |     setIsMobile(window.innerWidth < MOBILE_BREAKPOINT)
+     |     ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  15 |     return () => mql.removeEventListener('change', onChange)
+  16 |   }, [])
+  17 |  react-hooks/set-state-in-effect
+
+/Users/dheerurajpoot/Desktop/scammer-alert/src/components/ui/use-toast.ts
+  18:7  warning  'actionTypes' is assigned a value but only used as a type  @typescript-eslint/no-unused-vars
+
+/Users/dheerurajpoot/Desktop/scammer-alert/src/hooks/use-mobile.ts
+  14:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/dheerurajpoot/Desktop/scammer-alert/src/hooks/use-mobile.ts:14:5
+  12 |     }
+  13 |     mql.addEventListener('change', onChange)
+> 14 |     setIsMobile(window.innerWidth < MOBILE_BREAKPOINT)
+     |     ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  15 |     return () => mql.removeEventListener('change', onChange)
+  16 |   }, [])
+  17 |  react-hooks/set-state-in-effect
+
+/Users/dheerurajpoot/Desktop/scammer-alert/src/hooks/use-toast.ts
+  18:7  warning  'actionTypes' is assigned a value but only used as a type  @typescript-eslint/no-unused-vars
+
+/Users/dheerurajpoot/Desktop/scammer-alert/src/hooks/useFirebase.ts
+  45:10  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+/Users/dheerurajpoot/Desktop/scammer-alert/src/hooks/useFirebase.ts:45:10
+  43 |   }, []);
+  44 |
+> 45 |   return servicesRef.current || { database: null as any, auth: null as any };
+     |          ^^^^^^^^^^^^^^^^^^^ Cannot access ref value during render
+  46 | }
+  47 |
+  48 | export function getFirebaseServices(): FirebaseServices {  react-hooks/refs
+  45:10  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+/Users/dheerurajpoot/Desktop/scammer-alert/src/hooks/useFirebase.ts:45:10
+  43 |   }, []);
+  44 |
+> 45 |   return servicesRef.current || { database: null as any, auth: null as any };
+     |          ^^^^^^^^^^^^^^^^^^^ Cannot access ref value during render
+  46 | }
+  47 |
+  48 | export function getFirebaseServices(): FirebaseServices {  react-hooks/refs
+  45:53  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                @typescript-eslint/no-explicit-any
+  45:72  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                @typescript-eslint/no-explicit-any
+
+✖ 21 problems (12 errors, 9 warnings)
+
