@@ -11,9 +11,9 @@ export const metadata: Metadata = {
   },
   description: 'The global database for reporting and searching digital scammers. Protect your community by identifying fraudulent phone numbers, social media IDs, and digital service scams.',
   keywords: ['scammer alert', 'report fraud', 'scam database', 'verify phone number', 'digital safety', 'online scams', 'blogging scams', 'phishing protection'],
-  authors: [{ name: 'Scammer Alert Team' }],
-  creator: 'Scammer Alert',
-  publisher: 'Scammer Alert',
+  authors: [{ name: 'Deelzo.com' }],
+  creator: 'Deelzo.com',
+  publisher: 'Deelzo.com',
   formatDetection: {
     email: false,
     address: false,
@@ -28,23 +28,14 @@ export const metadata: Metadata = {
     description: 'Stop scammers before they strike. Search our community-verified database of fraudulent actors.',
     url: 'https://scammers.pro',
     siteName: 'Scammers.Pro',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Scammer Alert Platform Preview',
-      },
-    ],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: 'Scammer Alert - Stop Digital Fraud',
     description: 'Join the community-driven fight against online scammers. Report and search for fraudsters today.',
     creator: '@ScammerAlertHQ',
-    images: ['/og-image.png'],
   },
   robots: {
     index: true,
@@ -59,11 +50,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/icon-light-32x32.png', media: '(prefers-color-scheme: light)' },
-      { url: '/icon-dark-32x32.png', media: '(prefers-color-scheme: dark)' },
-      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/favicon-96x96.png'},
+      { url: '/web-app-manifest-192x192.png' },
+      { url: '/apple-touch-icon.png' },
     ],
-    apple: '/apple-icon.png',
   },
   category: 'Security',
 }

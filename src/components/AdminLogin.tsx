@@ -130,7 +130,7 @@ export default function AdminLogin() {
             </button>
           </form>
 
-          <div className="mt-8 text-center">
+          {/* <div className="mt-8 text-center">
             <p className="text-xs font-bold text-slate-400">
               {isSignup ? (
                 <>
@@ -154,7 +154,6 @@ export default function AdminLogin() {
                 </>
               )}
             </p>
-          </div>
         </div>
 
         {/* Footer Info */}
