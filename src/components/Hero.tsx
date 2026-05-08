@@ -38,19 +38,19 @@ export default function Hero({ onSearch, searchQuery }: HeroProps) {
             <span className="text-xs font-bold text-blue-700 dark:text-blue-300 uppercase tracking-widest">Crowdsourced Protection</span>
           </div>
 
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 text-slate-900 dark:text-white leading-[1.1]">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 text-slate-900 dark:text-white leading-[1.1]">
             Stop Scammers <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">In Their Tracks</span>
           </h1>
           
-          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed">
             Search our community-verified database of scammer phone numbers, social media handles, and profiles. Together, we can build a safer digital world.
           </p>
 
           {/* Search Bar Container */}
-          <div className="relative max-w-3xl mx-auto mb-16">
+          <div className="relative max-w-2xl mx-auto mb-16">
             <div className="group relative bg-white dark:bg-slate-900 rounded-[2rem] p-2 shadow-2xl shadow-blue-500/10 border border-slate-200 dark:border-slate-800 focus-within:border-blue-500/50 focus-within:ring-4 focus-within:ring-blue-500/5 transition-all">
               <div className="flex items-center">
-                <div className="pl-6 pr-3">
+                <div className="pl-3 sm:pl-6 pr-3">
                   <Search className="w-6 h-6 text-slate-400 group-focus-within:text-blue-500 transition-colors" />
                 </div>
                 <input
@@ -59,30 +59,21 @@ export default function Hero({ onSearch, searchQuery }: HeroProps) {
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyDown={handleKeyDown}
-                  className="flex-1 py-4 bg-transparent border-0 focus:outline-none text-lg text-slate-900 dark:text-white placeholder:text-slate-400 w-full"
+                  className="flex-1 py-2 md:py-4 bg-transparent border-0 focus:outline-none text-base md:text-lg text-slate-900 dark:text-white placeholder:text-slate-400 w-full"
                 />
                 <button
                   onClick={handleSearchSubmit}
-                  className="hidden sm:flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl transition-all hover:shadow-lg hover:shadow-blue-500/30 active:scale-95 mr-1"
+                  className="flex items-center gap-2 px-4 py-2 md:px-8 md:py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl transition-all hover:shadow-lg hover:shadow-blue-500/30 active:scale-95 mr-1"
                 >
-                  <Search className="w-5 h-5" />
-                  <span>Search</span>
+                  <Search className="w-4 h-4 md:w-5 md:h-5" />
+                  <span className="hidden sm:flex">Search</span>
                 </button>
               </div>
             </div>
-            
-            {/* Mobile Search Button */}
-            <button
-              onClick={handleSearchSubmit}
-              className="sm:hidden w-full mt-4 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl shadow-lg transition-all flex items-center justify-center gap-2"
-            >
-              <Search className="w-5 h-5" />
-              <span>Search Database</span>
-            </button>
           </div>
 
           {/* Trust Indicators */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
+          <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto">
             <div className="flex items-center justify-center gap-3">
               <div className="w-12 h-12 rounded-2xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center">
                 <ShieldAlert className="w-6 h-6 text-blue-600 dark:text-blue-400" />

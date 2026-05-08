@@ -127,24 +127,24 @@ export default function ReportForm({ onClose, onSubmitted }: ReportFormProps) {
     <div className="fixed inset-0 bg-slate-950/40 backdrop-blur-sm z-[60] flex items-center justify-center p-4 overflow-y-auto animate-fade-in">
       <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] max-w-2xl w-full my-8 shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden animate-slide-up">
         {/* Header */}
-        <div className="px-8 py-10 bg-slate-50 dark:bg-slate-900/50 border-b border-slate-200 dark:border-slate-800 relative">
+        <div className="px-4 md:px-8 py-6 md:py-10 bg-slate-50 dark:bg-slate-900/50 border-b border-slate-200 dark:border-slate-800 relative">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800 mb-4">
             <ShieldAlert className="w-4 h-4 text-blue-600 dark:text-blue-400" />
             <span className="text-[10px] font-black text-blue-700 dark:text-blue-300 uppercase tracking-[0.2em]">Secure Submission</span>
           </div>
-          <h2 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">Report a Scammer</h2>
+          <h2 className="text-lg md:text-3xl font-black text-slate-900 dark:text-white tracking-tight">Report a Scammer</h2>
           <p className="text-slate-500 dark:text-slate-400 font-medium mt-1">Help us protect the community with accurate details.</p>
           
           <button
             onClick={onClose}
-            className="absolute top-8 right-8 p-3 hover:bg-slate-200/50 dark:hover:bg-slate-800 rounded-2xl transition-all"
+            className="absolute top-4 right-4 md:top-8 md:right-8 p-3 hover:bg-slate-200/50 dark:hover:bg-slate-800 rounded-2xl transition-all"
           >
             <X className="w-6 h-6 text-slate-400" />
           </button>
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="p-8 space-y-8">
+        <form onSubmit={handleSubmit} className="p-4 md:p-8 md:space-y-8 space-y-6">
           {error && (
             <div className="flex gap-3 p-4 bg-rose-50 dark:bg-rose-950/30 border border-rose-100 dark:border-rose-900/50 rounded-2xl animate-shake">
               <ShieldAlert className="w-5 h-5 text-rose-600 flex-shrink-0" />
@@ -153,12 +153,12 @@ export default function ReportForm({ onClose, onSubmitted }: ReportFormProps) {
           )}
 
           {/* Contact Identifiers Grid */}
-          <div className="space-y-6">
-            <h3 className="text-xs font-black text-slate-400 uppercase tracking-[0.2em] ml-1">Scammer Identifiers</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="md:space-y-6 space-y-4">
+            <h3 className="text-[10px] md:text-xs font-black text-slate-400 uppercase tracking-[0.2em] ml-1">Scammer Identifiers</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 gap-2">
               <div className="relative group">
-                <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-500 transition-colors">
-                  <Phone className="w-5 h-5" />
+                <div className="absolute left-4  top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-500 transition-colors">
+                  <Phone className="w-4 h-4 md:w-5 md:h-5" />
                 </div>
                 <input
                   type="text"
@@ -166,12 +166,12 @@ export default function ReportForm({ onClose, onSubmitted }: ReportFormProps) {
                   placeholder="Phone Number"
                   value={formData.phoneNumber}
                   onChange={handleChange}
-                  className="w-full pl-12 pr-4 py-4 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl focus:outline-none focus:ring-4 focus:ring-blue-500/5 focus:border-blue-500/50 transition-all font-medium"
+                  className="w-full pl-12 pr-4 py-2 md:py-4 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl focus:outline-none focus:ring-4 focus:ring-blue-500/5 focus:border-blue-500/50 transition-all font-medium"
                 />
               </div>
               <div className="relative group">
                 <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors">
-                  <FaFacebook className="w-5 h-5" />
+                  <FaFacebook className="w-4 h-4 md:w-5 md:h-5" />
                 </div>
                 <input
                   type="text"
@@ -179,12 +179,12 @@ export default function ReportForm({ onClose, onSubmitted }: ReportFormProps) {
                   placeholder="Facebook Username/ID"
                   value={formData.facebookId}
                   onChange={handleChange}
-                  className="w-full pl-12 pr-4 py-4 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:border-blue-600/50 transition-all font-medium"
+                  className="w-full pl-12 pr-4 py-2 md:py-4 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:border-blue-600/50 transition-all font-medium"
                 />
               </div>
               <div className="relative group">
                 <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-purple-500 transition-colors">
-                  <BsInstagram className="w-5 h-5" />
+                  <BsInstagram className="w-4 h-4 md:w-5 md:h-5" />
                 </div>
                 <input
                   type="text"
@@ -192,12 +192,12 @@ export default function ReportForm({ onClose, onSubmitted }: ReportFormProps) {
                   placeholder="Instagram Handle"
                   value={formData.instagramId}
                   onChange={handleChange}
-                  className="w-full pl-12 pr-4 py-4 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl focus:outline-none focus:ring-4 focus:ring-purple-500/5 focus:border-purple-500/50 transition-all font-medium"
+                  className="w-full pl-12 pr-4 py-2 md:py-4 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl focus:outline-none focus:ring-4 focus:ring-purple-500/5 focus:border-purple-500/50 transition-all font-medium"
                 />
               </div>
               <div className="relative group">
                 <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-slate-600 transition-colors">
-                  <UserCircle className="w-5 h-5" />
+                  <UserCircle className="w-4 h-4 md:w-5 md:h-5" />
                 </div>
                 <input
                   type="text"
@@ -205,21 +205,21 @@ export default function ReportForm({ onClose, onSubmitted }: ReportFormProps) {
                   placeholder="Telegram / WhatsApp / Other"
                   value={formData.otherId}
                   onChange={handleChange}
-                  className="w-full pl-12 pr-4 py-4 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl focus:outline-none focus:ring-4 focus:ring-slate-500/5 focus:border-slate-500/50 transition-all font-medium"
+                  className="w-full pl-12 pr-4 py-2 md:py-4 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl focus:outline-none focus:ring-4 focus:ring-slate-500/5 focus:border-slate-500/50 transition-all font-medium"
                 />
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-8">
             {/* Scam Type */}
-            <div className="space-y-4">
-              <h3 className="text-xs font-black text-slate-400 uppercase tracking-[0.2em] ml-1">Type of Fraud</h3>
+            <div className="md:space-y-4 space-y-2">
+              <h3 className="text-[10px] md:text-xs font-black text-slate-400 uppercase tracking-[0.2em] ml-1">Type of Fraud</h3>
               <select
                 name="scamType"
                 value={formData.scamType}
                 onChange={handleChange}
-                className="w-full px-4 py-4 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl focus:outline-none focus:ring-4 focus:ring-blue-500/5 focus:border-blue-500/50 transition-all font-bold text-slate-700 dark:text-slate-300 appearance-none cursor-pointer"
+                className="w-full px-4 py-2 md:py-4 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl focus:outline-none focus:ring-4 focus:ring-blue-500/5 focus:border-blue-500/50 transition-all md:font-bold text-slate-700 dark:text-slate-300 appearance-none cursor-pointer"
               >
                 {SCAM_TYPES.map((type) => (
                   <option key={type.value} value={type.value}>{type.label}</option>
@@ -228,8 +228,8 @@ export default function ReportForm({ onClose, onSubmitted }: ReportFormProps) {
             </div>
 
             {/* Submitter Email */}
-            <div className="space-y-4">
-              <h3 className="text-xs font-black text-slate-400 uppercase tracking-[0.2em] ml-1">Your Email (Optional)</h3>
+            <div className="md:space-y-4 space-y-2">
+              <h3 className="text-[10px] md:text-xs font-black text-slate-400 uppercase tracking-[0.2em] ml-1">Your Email (Optional)</h3>
               <div className="relative group">
                 <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-500 transition-colors">
                   <Mail className="w-5 h-5" />
@@ -240,17 +240,17 @@ export default function ReportForm({ onClose, onSubmitted }: ReportFormProps) {
                   placeholder="For follow-up only"
                   value={formData.reportedByEmail}
                   onChange={handleChange}
-                  className="w-full pl-12 pr-4 py-4 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl focus:outline-none focus:ring-4 focus:ring-blue-500/5 focus:border-blue-500/50 transition-all font-medium"
+                  className="w-full pl-10 md:pl-12 pr-4 py-2 md:py-4 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl focus:outline-none focus:ring-4 focus:ring-blue-500/5 focus:border-blue-500/50 transition-all font-medium"
                 />
               </div>
             </div>
           </div>
 
           {/* Description */}
-          <div className="space-y-4">
-            <h3 className="text-xs font-black text-slate-400 uppercase tracking-[0.2em] ml-1">Scam Incident Details</h3>
+          <div className="md:space-y-4 space-y-2">
+            <h3 className="text-[10px] md:text-xs font-black text-slate-400 uppercase tracking-[0.2em] ml-1">Scam Incident Details</h3>
             <div className="relative group">
-              <div className="absolute left-4 top-6 text-slate-400 group-focus-within:text-blue-500 transition-colors">
+              <div className="absolute left-4 top-3 md:top-6 text-slate-400 group-focus-within:text-blue-500 transition-colors">
                 <MessageSquare className="w-5 h-5" />
               </div>
               <textarea
@@ -258,32 +258,32 @@ export default function ReportForm({ onClose, onSubmitted }: ReportFormProps) {
                 placeholder="How did they contact you? What happened?"
                 value={formData.description}
                 onChange={handleChange}
-                rows={4}
-                className="w-full pl-12 pr-4 py-6 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl focus:outline-none focus:ring-4 focus:ring-blue-500/5 focus:border-blue-500/50 transition-all font-medium resize-none"
+                rows={3}
+                className="w-full pl-12 pr-4 py-2 md:py-6 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl focus:outline-none focus:ring-4 focus:ring-blue-500/5 focus:border-blue-500/50 transition-all font-medium resize-none"
               />
             </div>
           </div>
 
           {/* Actions */}
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
+          <div className="flex flex-row gap-4 md:pt-4">
             <button
               type="button"
               onClick={onClose}
-              className="flex-1 py-4 px-6 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-bold rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-all active:scale-95"
+              className="flex-1 py-2 md:py-4 px-6 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-bold rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-all active:scale-95"
             >
               Cancel
             </button>
             <button
               type="submit"
               disabled={isSubmitting}
-              className="flex-1 py-4 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-black rounded-2xl shadow-xl shadow-blue-500/20 transition-all active:scale-95 flex items-center justify-center gap-2"
+              className="flex-1 py-2 md:py-4 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-black rounded-2xl shadow-xl shadow-blue-500/20 transition-all active:scale-95 flex items-center justify-center gap-2"
             >
               {isSubmitting ? (
                 <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
               ) : (
                 <>
                   <Send className="w-5 h-5" />
-                  <span>Submit Report</span>
+                  <span>Submit</span>
                 </>
               )}
             </button>

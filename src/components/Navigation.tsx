@@ -16,15 +16,15 @@ export default function Navigation({ onReportClick }: NavigationProps) {
             <Shield className="w-6 h-6 text-white" />
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-xl tracking-tight">Scammers.Pro</span>
-            <span className="text-[10px] text-blue-600 dark:text-blue-400 font-semibold uppercase tracking-wider -mt-1">Community Protection</span>
+            <span className="font-bold text-lg md:text-xl tracking-tight">Scammers.Pro</span>
+            <span className="text-[8px] md:text-[10px] text-blue-600 dark:text-blue-400 font-semibold uppercase tracking-wider -mt-1">Community Protection</span>
           </div>
         </Link>
 
         <div className="flex items-center gap-4">
           <button 
             onClick={onReportClick}
-            className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl shadow-lg shadow-blue-500/25 transition-all hover:scale-105 active:scale-95"
+            className="flex items-center gap-2 px-2 py-1.5 md:px-5 md:py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl shadow-lg shadow-blue-500/25 transition-all hover:scale-105 active:scale-95"
           >
             <Plus className="w-4 h-4" />
             <span>Report Scammer</span>
