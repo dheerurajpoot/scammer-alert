@@ -81,9 +81,13 @@ export default function RootLayout({
 	return (
 		<html lang='en' className='bg-background' suppressHydrationWarning>
 			{/* Google AdSense Script */}
+			<meta
+				name='google-adsense-account'
+				content='ca-pub-9329964598543411'
+			/>
 			<Script
 				async
-				src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8094520346016014'
+				src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9329964598543411'
 				crossOrigin='anonymous'
 				strategy='afterInteractive'
 			/>
